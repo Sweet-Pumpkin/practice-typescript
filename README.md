@@ -1,1 +1,1 @@
-# practice-typescript
+# Megabyte School Typescript 학습
