@@ -1,6 +1,5 @@
 ## Types of TypeScript
 
-
 ### 1. number
 ```
 let num : number = 1;
