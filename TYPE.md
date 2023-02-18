@@ -56,7 +56,7 @@ const playerPark : Player = {
 }
 ```
 
-### 5-2 alias function
+### 5-2. alias function
 ```
 type Player = {
   name : string,
@@ -74,3 +74,61 @@ play.age = 20;
 ```
 
 ---
+
+### 6. readonly
+```
+const numbers : readonly number[] = [1, 2, 3, 4, 5];
+numbers.push(6) = > error
+```
+
+### 7. tuple
+```
+const player : [string, number, boolean] = ["dano", 100, true];
+```
+
+### 8. any
+```
+let a : any[] = [1, 2, 3];
+let b : any[] = true;
+
+a + b => not error?
+```
+
+### 9. unknown
+```
+let a : unknown;
+
+if (typeof a === 'number') {
+  let b = a + 1 => not error
+}
+
+a.toUpperCase(); => error
+```
+
+### 10. void
+```
+function printHi() : void {
+  console.log('hi');
+}
+```
+
+### 11. never
+```
+function returnHi(): never {
+  return "Hi"; => error
+}
+
+function returnError(): never {
+  throw new Error("X");  => not error
+}
+
+function parameter(name : string | number) {
+  if (typeof name === "string") {
+    name => (parameter) name : stirng
+  } else if (typeof name === "number") {
+     name => (parameter) name : number
+  } else {
+    name => (parameter) name : never
+  }
+}
+```
