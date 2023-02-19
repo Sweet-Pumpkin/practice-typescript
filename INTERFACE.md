@@ -28,7 +28,7 @@ const dano : Player1 {
 ```
 
 ### 1-2. interface 상속
-- type
+- class
 ```
 type User = {
     name : string
@@ -46,6 +46,84 @@ interface User {
 }
 
 interface Player extends User {
-    
+
+}
+```
+
+### 1-3. interface vs class
+- class
+```
+abstract class User {
+    construnctor(
+        protected firstName : string,
+        protected lastName : string
+    ) {}
+
+    abstract sayHi(name : string) : string
+    abstract fullName() : string
+}
+
+class Player extends User {
+    fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+    sayHi(name : string) {
+        return `Hello ${name}. My name is ${this.fullName}`;
+    }
+}
+```
+
+- interface
+```
+interface User {
+    firstName : string,
+    lastName : string,
+
+    sayHi(name : string) : string
+    fullName() : string
+}
+
+class Player implement User {
+    constructor(
+        public firstName : string,
+        public lastName : string
+    ) {}
+
+    fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+    sayHi(name : string) {
+        return `Hello ${name}. My name is ${this.fullName}`;
+    }
+}
+```
+
+### 1-4. interface 이중 상속
+```
+interface User {
+    firstName : string,
+    lastName : string,
+
+    sayHi(name : string) : string
+    fullName() : string
+}
+
+interface Human {
+    health : number
+}
+
+class Player implement User, Human {
+    constructor(
+        public firstName : string,
+        public lastName : string,
+        public health : number
+    ) {}
+
+    fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+    sayHi(name : string) {
+        return `Hello ${name}. My name is ${this.fullName}`;
+    }
 }
 ```
