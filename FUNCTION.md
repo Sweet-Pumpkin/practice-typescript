@@ -47,6 +47,7 @@ const add : Add (a, b, c? : number) {
 ---
 
 ### 3-1. polymorphism(generics)
+- `generic`은 다른 타입에게 물려줄 수 있다.
 ```
 type SuperPrint = <T>(arr : T[]) => T
 
