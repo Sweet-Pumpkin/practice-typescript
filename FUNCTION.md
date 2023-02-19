@@ -7,6 +7,8 @@ type Add = (a : number, b : number) => number;
 const add : Add = (a, b) => a + b;
 ```
 
+---
+
 ### 2-1. overloading
 ```
 type Config = {
@@ -27,6 +29,9 @@ const push : Push = (config) => {
     }
 }
 ```
+
+---
+
 ### 2-2. overloading
 ```
 type Add = {
@@ -38,6 +43,8 @@ const add : Add (a, b, c? : number) {
     return a + b;
 }
 ```
+
+---
 
 ### 3-1. polymorphism(generics)
 ```
@@ -51,6 +58,8 @@ superPrint(["a", "b", "c", "d"]); => string type
 superPrint([1, 2, true, "a"]); => number or boolean or string type
 ```
 
+---
+
 ### 3-2 generics
 ```
 function superPrint<T>(a : T[]) {
@@ -60,6 +69,8 @@ function superPrint<T>(a : T[]) {
 const a = superPrint<number>([1, 2, 3, 4]);
 const b = superPrint([1, 2, 3, 4]);
 ```
+
+---
 
 ### 3-3 generics
 ```
@@ -75,6 +86,8 @@ const dano : Player<{favFood : string}> = {
     }
 }
 ```
+
+---
 
 ### 3-4 generics
 ```
@@ -101,6 +114,8 @@ const park : Player<null> = {
     extraInfo : null
 }
 ```
+
+---
 
 ### 3-5 generics
 ```
