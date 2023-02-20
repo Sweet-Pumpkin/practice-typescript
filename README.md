@@ -6,3 +6,4 @@
 ### [3. Classes](https://github.com/Sweet-Pumpkin/practice-typescript/blob/main/CLASS.md)
 ### [4. Interface](https://github.com/Sweet-Pumpkin/practice-typescript/blob/main/INTERFACE.md)
 ### [5. Polymorphism](https://github.com/Sweet-Pumpkin/practice-typescript/blob/main/POLYMORPHISM.md)
+### [6. Excercise](https://github.com/Sweet-Pumpkin/practice-typescript/tree/main/exercise)
